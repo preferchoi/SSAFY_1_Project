@@ -1,0 +1,27 @@
+1. 기본 실행
+python manage.py makemigrations
+
+python manage.py migrate
+python manage.py loaddata movies.json
+
+2. 기능구현
+	- 1. movies
+		1) 전체 페이지 조회 - GET  - 최선호
+		2) 단일 상세 페이지 조회 - GET - 조성욱
+		3) 추천 영화 페이지 조회 - GET - 최선호, 조성욱
+			적절한 알고리즘을 활용하여 10개의 영화를 추천하여 제공, readme.md에 작성
+	- 2. community
+		1) 전체 리뷰 목록 페이지 조회 - GET - 최선호
+		2) 리뷰 생성 및 데이터 저장 - GET, POST
+		3) 리뷰 상세 페이지 조회 - GET
+			선택) 댓글 좋아요 버튼 생성, 댓글 좋아요 수 표시 - 미구현@@@@
+		4) 단일 댓글 데이터 저장 - POST
+		5) 단일 리뷰 좋아요 - POST
+	- 3. accounts
+		1) 회원 생성 페이지 조회 및 저장 - GET, POST, POST
+		2) 로그인 페이지 조회 및 세션 생성 및 저장 - GET, POST
+		3) 세션 데이터 삭제 - GET, POST
+		4) 사용자 상세 조회 - GET - 조성욱
+		5) 사용자 팔로우 - POST
+		
+

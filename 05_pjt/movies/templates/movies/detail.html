@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>detail</h1>
+<hr>
+<div class="card" style="width: rem;">
+  <img src="{{ movie.poster_url }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ movie.title }}</h5>
+    <h6>Audience: {{ movie.audience }}</h6>
+    <h6>Release Dates: {{ movie.release_date }}</h6>
+    <h6>Genre: {{ movie.genre }}</h6>
+    <h6>Score: {{ movie.score }}</h6>
+    <p class="card-text">{{ movie.description }}</p>
+    <a href="{% url 'movies:update' movie.pk %}" class="btn btn-primary">update</a>
+    <a href="#" class="btn btn-danger">delete</a>
+  </div>
+</div>
+{% endblock content %}

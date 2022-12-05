@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>EDIT</h1>
+<hr>
+<form action="{% url 'movies:update' movie.pk %}" method="post">
+    {% csrf_token %}
+    <label for="title">title:</label>
+    <input type="text" name="title" id="title" value="{{ movie.title }}"><br>
+    <label for="audience">audience:</label>
+    <input type="text" name="audience" id="audience" value="{{ movie.audience }}"><br>
+    <label for="release_data">release_date:</label>
+    <input type="date" name="release_data" id="release_data" value="{{ movie.release_data }}"><br>
+    <label for="genre">genre:</label>
+    <input type="text" name="genre" id="genre" value="{{ movie.genre }}"><br>
+    <label for="score">score:</label>
+    <input type="text" name="score" id="score" value="{{ movie.score }}"><br>
+    <label for="poster_url">poster_url:</label>
+    <input type="text" name="poster_url" id="poster_url" value="{{ movie.poster_url }}"><br>
+    <label for="description">description:</label>
+    <input type="text" name="description" id="descrition" value="{{ movie.descrition }}"><br>
+    <input type="submit" value="submit">
+</form>
+<a href="{% url 'movies:detail' movie.pk %}">[back]</a>
+{% endblock content %}

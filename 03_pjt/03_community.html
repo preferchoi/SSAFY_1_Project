@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="01_nav_footer.css">
+  <link rel="stylesheet" href="03_community.css">
+  <title>Community</title>
+</head>
+<body>
+  <!-- 01_nav_footer에서 작성한 Navigation bar & Modal & Footer 코드를 적절한 위치에 사용합니다. -->
+<!-- navar 기본 세팅 가져와서 수정 -->
+  <!-- fixed-top으로 상단 고정 -->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark"> 
+    <div class="container-fluid">
+      <!-- a태그의 href 속성에 링크값 삽입해 하이퍼링크로 기동 -->
+      <a class="navbar-brand" href="./02_home.html">
+        <!-- img태그를 활용하여 로고 이미지 삽입 -->
+        <img src="./images/logo.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <!-- a태그의 href 속성에 링크값 삽입해 하이퍼링크로 기동 -->
+            <a class="nav-link active" aria-current="page" href="./02_home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <!-- a태그의 href 속성에 링크값 삽입해 하이퍼링크로 기동 -->
+            <a class="nav-link active" aria-current="page" href="./03_community.html">Community</a>
+          </li>
+          <li class="nav-item">
+            <!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop" 설정해서 로그인 버튼 누르면 모달 실행되게 함 -->
+            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- 모달 내부에 폼 제작 -->
+        <form>
+          <label for="">ID : </label>
+          <input type="text" name="" id="">
+          <br>
+          <label for="">PW : </label>
+          <input type="password">
+          <br>
+          <input type="checkbox" value="">Check me out
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- d-lg-none d-block -->
+<!-- d-none d-lg-block -->
+  <!-- 03_community.html -->
+  <main class="container">
+    <h1>Community</h1>
+    <!-- Aside - 게시판 목록 -->
+    <div class="row">
+      <aside class="col-12 col-lg-2">
+        <ul class="list-group">
+          <li class="list-group-item"><a href="#">Boxoffice</a></li>
+          <li class="list-group-item"><a href="#">Movies</a></li>
+          <li class="list-group-item"><a href="#">Genres</a></li>
+          <li class="list-group-item"><a href="#">Actors</a></li>
+        </ul>
+      </aside>
+
+      <!-- Section - 게시판 -->
+      <section class="col-12 col-lg-10">
+        <div class="d-lg-none d-block">
+          <hr>
+          <article>
+            <h2>Best Movie Ever</h2>
+            <h4>Great Movie Title</h4>
+            <p>user</p>
+            <p>1 minute ago</p>
+          </article>
+          <hr>
+          <article>
+            <h2>Movie Test</h2>
+            <h4>Great Movie Title</h4>
+            <p>user</p>
+            <p>1 minute ago</p>
+          </article>
+          <hr>
+          <article>
+            <h2>Movie Test</h2>
+            <h4>Great Movie Title</h4>
+            <p>user</p>
+            <p>1 minute ago</p>
+          </article>
+          <hr>
+          <article>
+            <h2>Movie Test</h2>
+            <h4>Great Movie Title</h4>
+            <p>user</p>
+            <p>1 minute ago</p>
+          </article>
+        </div>
+        <div class="d-none d-lg-block">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">영화 제목</th>
+                <th scope="col">글 제목</th>
+                <th scope="col">작성자</th>
+                <th scope="col">작성 시간</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Great Movie title</th>
+                <td>Best Movie Ever</td>
+                <td>user1</td>
+                <td>1 minute ago</td>
+              </tr>
+              <tr>
+                <th scope="row">Great Movie title</th>
+                <td>Movie Test</td>
+                <td>user2</td>
+                <td>1 minute ago</td>
+              </tr>
+              <tr>
+                <th scope="row">Great Movie title</th>
+                <td >Movie Test</td>
+                <td>user3</td>
+                <td>1 minute ago</td>
+              </tr>
+              <tr>
+                <th scope="row">Great Movie title</th>
+                <td >Movie Test</td>
+                <td>user4</td>
+                <td>1 minute ago</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+  </div>
+  </main>
+
+
+  
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+
+    <!-- footer 바닥에 고정, 중앙 정렬 -->
+    <footer class="fixed-bottom text-center">
+      Web-bootstrap PJT, by prefer_choi
+   </footer>
+ 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
